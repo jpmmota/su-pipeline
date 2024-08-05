@@ -1,23 +1,17 @@
-version: '3.8'
-
 services:
   frontend:
-    # image: jpmmota/frontend:0c60674
-    build: 
+    build:
       context: ./frontend
-      dockerfile: Dockerfile
     ports:
       - '80:80'
-    env_file: 
+    env_file:
       - .env.frontend
     depends_on:
       - backend
 
   backend:
-    # image: jpmmota/backend:0c60674
     build:
       context: ./backend
-      dockerfile: Dockerfile
     ports:
       - '3000:3000'
     env_file:
