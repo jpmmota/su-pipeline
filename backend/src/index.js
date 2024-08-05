@@ -7,7 +7,7 @@ const port = 3000;
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-// CORS configuration 
+// CORS configuration
 const cors = require('cors');
 const allowedOrigin = process.env.CORS_ALLOWED_ORIGIN;
 const corsOptions = {
